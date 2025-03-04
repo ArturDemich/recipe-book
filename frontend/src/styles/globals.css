@@ -1,0 +1,159 @@
+:root {
+  --background-color: #ffffff;
+  --second-background-color: #f9fafb;
+  --main-text-color: #131316;
+  --color-blu: #19a0ec;
+  --color-red: #fa0f17;
+  --color-green: #04d100;
+
+  --padding-body-wrapper: 0 80px 0 80px;
+  --padding-footer: 48px 32px 32px 32px;
+  --gap-row-cards: 20px;
+  --gap-column-cards: 32px;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/fonts/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-stretch: 50% 100% 200%;
+  font-style: normal;
+}
+
+html {
+  overflow: unset;
+  height: 100%;
+}
+body {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  flex-direction: column;
+  color: var(--main-text-color);
+  background: var(--background-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Open Sans';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+body::-webkit-scrollbar {
+  width: 0px;
+  height: 12px;
+}
+body::-webkit-scrollbar-track {
+  background: var(--background-color);
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb {
+  background: #f4f4f5;
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: #c7c7c7;
+}
+.no-scroll {
+  overflow: hidden;
+  padding-right: 12px;
+}
+
+body .wrapper {
+  width: 100%;
+  max-width: 1440px;
+  padding: var(--padding-body-wrapper);
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  flex-grow: 1;
+}
+
+body main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  -webkit-tap-highlight-color: #f9fafb93;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 600;
+  margin: 0;
+}
+h2 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  margin: 0;
+}
+h3 {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 600;
+  margin: 0;
+}
+h4 {
+  font-weight: 600;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  padding: 4px 6px;
+  color: #26265e;
+}
+a:hover {
+  background-color: #c7c7c7;
+  border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  :root {
+    --padding-body-wrapper: 0 16px 0 16px;
+    --padding-footer: 32px 16px;
+  }
+  body main {
+    gap: 16px;
+  }
+
+  h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  h2 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .no-scroll {
+    padding-right: 0;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+  :root {
+    --padding-body-wrapper: 0 24px 0 24px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  :root {
+    --padding-body-wrapper: 0 40px 0 40px;
+  }
+}
